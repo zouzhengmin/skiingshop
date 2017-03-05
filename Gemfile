@@ -44,7 +44,7 @@ gem 'font-awesome-rails'
 gem 'aasm'
 gem 'letter_opener', group: :development
 gem 'figaro'
-gem 'fog'
+gem 'fog-aws'
 gem 'jquery-turbolinks'
 gem "twemoji"
 gem 'bullet', group: 'development'
