@@ -13,18 +13,6 @@
 	  </div>
 	</div>
 
-	<div class="lp-products pt60 pb60 lp-bg-gray">
-		<h2 class="title tc f22 pb50">热卖装备</h2>
-		<div class="productList-wrap w1200 bc">
-    <ul class="productList clearfix pb20">
-      <% Product.all.includes(:photos).sort_by {|product| product.favorites.count}.reverse.each_with_index do |product, index| %>
-				<% if index < 10 %>
-          <%= render :partial => "product_item", locals: { product: product, index: index } %>
-        <% end %>
-      <% end %>
-    </ul>
-  </div>
-	</div>
 
 	<div class="lp-advantage pt60 pb60">
 		<h2 class="title tc f22 pb50">凭啥这么自信？</h2>
