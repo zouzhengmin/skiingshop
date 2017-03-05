@@ -1,1 +1,125 @@
-<h1> Hello World! </h1>
+<!-- div class=""> -->
+	<div class="lp-banner">
+	  <div class="jumbotron">
+	    <div class="text-content">
+	      <h1 class="jumbotron-title">白粉の诱惑</h1>
+	      <p class="jumbotron-slogan">
+	        放下手机 一起high
+	      </p>
+	      <p class="jumbotron-lead"><a class="btn-lg lp-b-btn" href="/products">
+	      	水平不够 装备凑</a>
+	      </p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="lp-products pt60 pb60 lp-bg-gray">
+		<h2 class="title tc f22 pb50">热卖装备</h2>
+		<div class="productList-wrap w1200 bc">
+    <ul class="productList clearfix pb20">
+      <% Product.all.includes(:photos).sort_by {|product| product.favorites.count}.reverse.each_with_index do |product, index| %>
+				<% if index < 10 %>
+          <%= render :partial => "product_item", locals: { product: product, index: index } %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+	</div>
+
+	<div class="lp-advantage pt60 pb60">
+		<h2 class="title tc f22 pb50">凭啥这么自信？</h2>
+		<div class="container bc">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn">
+						<img class="lp-advantage-img" src="https://jdstore-seoul.s3.amazonaws.com/wb3ne.jpg">
+						<p class="lp-advantage-title f18 mt20">质量保障</p>
+						<p class="lp-advantage-desc f14 pl20 pr20 mt30">我们是20多个国际品牌的代理商，品种齐全，品质毋庸置疑。</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+						<img class="lp-advantage-img" src="https://jdstore-seoul.s3.amazonaws.com/mr7i4.jpeg">
+						<p class="lp-advantage-title f18 mt20">专业教练</p>
+						<p class="lp-advantage-desc f14 pl20 pr20 mt30">我们有自己的教练队伍，均持有国际职业教练资格证，带你high满整个雪季。</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="lp-advantage-item bc pl20 pr20 tc wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+						<img class="lp-advantage-img" src="https://jdstore-seoul.s3.amazonaws.com/68ptr.jpg">
+						<p class="lp-advantage-title f18 mt20">雪场VIP</p>
+						<p class="lp-advantage-desc f14 pl20 pr20 mt30">我们与全国30多家雪场合作，参加我们的活动，尊享雪场贵宾体验。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="lp-feedback pt60 pb60 lp-bg-gray">
+		<h2 class="title tc f22 pb20">「AmazingStore」的粉er</h2>
+		<p class="f16 tc light pb30">听听他们是怎么“批评”我们的</p>
+    <div class="home-people container">
+    	<div class="row">
+    		<div class="item person fl col-md-4">
+	        <div class="avata-wrapper">
+	          <img class="avata" src="https://jdstore-seoul.s3.amazonaws.com/9pjdu.JPG">
+	        </div>
+	        <div class="intro clearfix">
+	          <div class="name">
+	            罗罗
+	          </div>
+	        </div>
+	        <div class="words wow fadeIn" data-wow-duration="1s">
+	          <span class="bg"></span>
+	          <span class="fa fa-quote-left quote quote-l iconfont"></span>
+	          <span class="fa fa-quote-right quote quote-r iconfont"></span>
+	          <div class="content">啥时候再组织一次北海道滑雪呀</div>
+	        </div>
+	      </div>
+	      <div class="item person fl col-md-4">
+	        <div class="avata-wrapper">
+	          <img class="avata" src="https://jdstore-seoul.s3.amazonaws.com/sunq6.JPG">
+	        </div>
+	        <div class="intro clearfix">
+	          <div class="name">
+	            大满
+	          </div>
+	        </div>
+	        <div class="words wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+	          <span class="bg"></span>
+	          <span class="fa fa-quote-left quote quote-l iconfont"></span>
+	          <span class="fa fa-quote-right quote quote-r iconfont"></span>
+	          <div class="content">教练真不是盖的，可惜总教新人，我们这帮老家伙就不管不顾了吗？</div>
+	        </div>
+	      </div>
+	      <div class="item person fl col-md-4">
+	        <div class="avata-wrapper">
+	          <img class="avata" src="https://jdstore-seoul.s3.amazonaws.com/uhum7.jpg">
+	        </div>
+	        <div class="intro clearfix">
+	          <div class="name">
+	            小幺儿
+	          </div>
+	        </div>
+	        <div class="words wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
+	          <span class="bg"></span>
+	          <span class="fa fa-quote-left quote quote-l iconfont"></span>
+	          <span class="fa fa-quote-right quote quote-r iconfont"></span>
+	          <div class="content">总能第一时间拿到亮骚装备，雪场焦点，非我莫属。</div>
+	        </div>
+	      </div>
+    	</div>
+    </div>
+	</div>
+
+	<div class="lp-action tc pr">
+		<div class="text-content pa pt60 pb60">
+			<p class="f16 pb20">雪季新品已经到货，进店装扮自己吧</p>
+			<p class="wow zoomIn" data-wow-duration=".5s">
+				<a class="btn-lg lp-b-btn bc"  href="/products">立刻选购</a>
+			</p>
+		</div>
+	</div>
+</div>
