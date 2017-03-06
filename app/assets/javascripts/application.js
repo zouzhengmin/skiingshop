@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
@@ -18,7 +18,7 @@
 //= require chosen-jquery
 //= require jquery.raty
 //= require_tree .
-
+//= require jquery
 // landing page 动画效果
 new WOW().init();
 
